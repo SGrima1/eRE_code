@@ -7,20 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # PRODUCT
 Product.destroy_all
-product1 = Product.create({:name=>"box1", :price => 1})
-product2 = Product.create({:name=>"box2", :price => 3})
-product3 = Product.create({:name=>"box3", :price => 5.50})
-product4 = Product.create({:name=>"box4", :price => 10})
-product5 = Product.create({:name=>"box45", :price => 3.20})
 
-puts "Total number of products: #{Product.all.count}"
-puts "Product names: #{Product.all.pluck("name")}"
-puts "Product1: #{product1.name} price: #{product1.price.round(2)}"
-puts "Product2: #{product2.name} price: #{product2.price.round(2)}"
-puts "Product3: #{product3.name} price: #{product3.price.round(2)}"
-puts "Product4: #{product4.name} price: #{product4.price.round(2)}"
-puts "Product5: #{product5.name} price: #{product5.price.round(2)}"
 
 # CART
 Cart.destroy_all
-puts "\nTotal cart count: #{Cart.all.count}"
