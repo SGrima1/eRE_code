@@ -49,3 +49,5 @@ class LineItemsController < ApplicationController
       params.require(:line_item).permit(:quantity,:product_id, :cart_id, :order_id)
     end
 end
+
+# cewefwe
