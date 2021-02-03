@@ -1,12 +1,63 @@
-<h2>All Products</h2>
 
-<% @products.each do |product| %>
-  <p>Name: <%= product.name %>; unit price of <%= number_to_currency(product.price) %></p>
-  <p>
-    <%= link_to "Edit", edit_product_path(product) %> |
-    <%= link_to "Delete", product_path(product), method: :delete, data: {confirm: "Are you sure?"} %>
-    <%= button_to "Add #{product.name} to cart", line_items_path(:product_id => product.id) %>
-  </p>
-<% end%>
 
-<%= link_to "New product", new_product_path %>
+  <div class="banner">
+  <video id="banner_video" loop muted></video>
+  <div id="main_content">
+  <div class="index-banner-grid">
+    <h1>Your food is art</h1>
+    <div class="space"></div>
+    <div class="index-shop">
+    <div>
+    <h3> <a href="#index-title">  Find its perfect frame </a></h3>
+    </div>
+    <div>
+        <h4><%= fa_icon "chevron-circle-down" , class: "fa-2x shop_font_awesome" %></h4>
+      </div>
+    </div> 
+  </div>
+  </div>
+  </div>
+<div class="index-page-container">
+  <%= link_to "New product", new_product_path %>
+    <div class="index-grid">
+      <h2> <a id="index-title"></a> The Lotus  </h2>
+      <% @products.each do |product| %>
+        <div class="m-3 p-3">
+          <%= link_to product_path(product.id) do %> 
+           <div class="product-card" > 
+            
+             <div class="product-card-image" style="background-image: url(
+                <% if product.photos.attached?  %>
+                  <%= cl_image_path product.photos[4].key, height: 300, width: 400, crop: :fill %>
+                <% else %>
+                  <%= 'assets/product.png' %>
+                <% end %>
+              );"> 
+              </div>
+            <div class="product-card-info">  
+              
+              <div class="index-card-grid">
+                <div class="index-card-title">
+                  <%= link_to product.name, product_path(product.id) %>
+                </div>
+                <div class="index-card-price">
+                  <%= number_to_currency(product.price) %>
+                </div>
+                <div class="index-card-discover">
+                  <h4>Discover Now <%= fa_icon "chevron-circle-right" , class: "discover_font_awesome" %> </h4>
+              </div>
+            </div>
+
+
+           </div> 
+          </div>
+          <%= link_to "Edit", edit_product_path(product) %> |
+          <%= link_to "Delete", product_path(product), method: :delete, data: {confirm: "Are you sure?"} %>
+          <%= button_to "Add #{product.name} to cart", line_items_path(:product_id => product.id) %>
+        <% end %>  
+        </div>
+       <% end %>
+    </div>
+
+</div>
+
