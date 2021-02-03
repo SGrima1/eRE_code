@@ -1,0 +1,52 @@
+<div class="show-container mx-auto py-3">
+
+
+  <div class="tasting-menu row mx-auto">
+    <div class="restaurant-cards col-5" style="display: flex; justify-content: center">
+			<div class="menu_width" style="width:100%">
+    
+          <div class="slider-for">           
+            <% @product.photos.each do |photo| %>
+              <div class="item">
+                <%= cl_image_tag photo.key, height: 469, width: 500, crop: :fill, :class => "box_img" %>
+              </div>
+            <% end %>
+          </div>
+
+					<div class="slider-nav">
+            <% if @product.photos.attached?  %>
+              <%= cl_image_tag @product.photos[0].key, height: 110, width: 110, crop: :fill %>
+            <% else %>
+              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+            <% end %>
+            <% if @product.photos.attached?  %>
+              <%= cl_image_tag @product.photos[1].key, height: 110, width: 110, crop: :fill %>
+            <% else %>
+              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+            <% end %>
+            <% if @product.photos.attached?  %>
+              <%= cl_image_tag @product.photos[2].key, height: 110, width: 110, crop: :fill %>
+            <% else %>
+              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+            <% end %>
+            <% if @product.photos.attached?  %>
+              <%= cl_image_tag @product.photos[3].key, height: 110, width: 110, crop: :fill %>
+            <% else %>
+              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+            <% end %>
+            <% if @product.photos.attached?  %>
+              <%= cl_image_tag @product.photos[4].key, height: 110, width: 110, crop: :fill %>
+            <% else %>
+              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+            <% end %>
+
+					</div>	
+			</div>
+    </div>
+
+    <div class="tasting_description col-4" id="tasting">
+      <h1> Box Description</h1>
+
+    </div>
+ 
+  </div>

@@ -25,12 +25,14 @@ require("channels")
 // External imports
 import "bootstrap";
 import { backgroundVideo } from '../components/bideo';
+import { slickCarousel } from '../components/slick_carousel';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   backgroundVideo();
+  slickCarousel();
   // Call your functions here, e.g:
   // initSelect2();
 });
