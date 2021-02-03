@@ -23,7 +23,11 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+require("slick-carousel");
+import "slick-carousel/slick/slick.scss"
+import "slick-carousel/slick/slick-theme.scss"
 import "bootstrap";
+
 import { backgroundVideo } from '../components/bideo';
 import { slickCarousel } from '../components/slick_carousel';
 
@@ -33,6 +37,7 @@ import { slickCarousel } from '../components/slick_carousel';
 document.addEventListener('turbolinks:load', () => {
   backgroundVideo();
   slickCarousel();
+  $('.scroller').slick();
   // Call your functions here, e.g:
   // initSelect2();
 });
