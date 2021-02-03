@@ -1,0 +1,157 @@
+
+.banner {
+  height: 90vh;
+  // background-size: cover;
+  // background-position: center;
+  // background: asset_url('assets/dinner.jpg') no-repeat;
+  // -ms-background-position-x: center;
+  // -ms-background-position-y: bottom;
+  // background-position: center bottom;
+}
+
+#banner_video{
+  z-index: 1;
+  height: 90vh; width: 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+#main_content{
+  z-index: 2;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  padding:10px 10px 50px 10px;
+  /* Vertical center */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner h1 {
+  margin: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.banner p {
+  font-size: 20px;
+  color: white;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.show_banner {
+  background-size: cover;
+  background-position: center;
+  background-color: $m-blue;
+  background-repeat: no-repeat;
+  padding-bottom: 8px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  justify-items: center;
+  align-items: center;
+}
+
+.show_banner.scrolled{
+  width: 100%;
+  z-index: 1;
+  position: fixed;
+  top: 10%;
+  left: 0;
+  background-color: #121b2a  !important;
+  transition: background-color 700ms linear;
+}
+.show_banner h1 {
+  margin: 0;
+  color: $m-gold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+}
+
+
+.show_banner h6 {
+  font-size: 20px;
+  color: $m-platinium;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+.show_banner p {
+  font-size: 15px;
+  color: $m-platinium;
+  opacity: .7;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.index-banner-grid{
+  z-index: 2;
+  display: grid;
+  margin-left: 24vh;
+  margin-right: 24vh;
+  height: 80vh;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: 6fr 1fr 1fr;
+  align-items: center;
+  grid-template-areas: 
+  "title x x"
+  "space space space "
+  "footer footer footer ";
+}
+
+.index-banner-grid h1{
+  font-size: 99px;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  grid-area: title;
+  padding-left: 4vh;
+}
+
+.index-banner-grid p{
+  font-size: 12px;
+  font-style: normal;
+  color: #cbcbcb;
+  font-weight: 500;
+  line-height: 14px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  grid-area: para;
+  padding-left: 4vh;
+}
+
+.index-banner-grid > .space{
+  grid-area: space;
+  border-bottom: 2px solid lightgray;
+}
+
+.index-banner-grid > .index-shop{
+  font-size: 24px !important ;
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 19px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  grid-area: footer;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 32px;
+  align-items: center;
+  margin: auto;
+}
+
+.banner a{
+  color: white;
+  text-decoration: none;
+}
+
+.banner a:hover{
+  color: white;
+  text-decoration: underline;
+}
