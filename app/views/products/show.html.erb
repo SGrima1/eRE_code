@@ -14,38 +14,28 @@
           </div>
 
 					<div class="slider-nav">
-            <% if @product.photos.attached?  %>
-              <%= cl_image_tag @product.photos[0].key, height: 110, width: 110, crop: :fill %>
-            <% else %>
-              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
+            <% @product.photos.each do |photo| %>
+              <div class="item">
+                <%= cl_image_tag photo.key, height: 110, width: 110, crop: :fill, :class => "box_img" %>
+              </div>
             <% end %>
-            <% if @product.photos.attached?  %>
-              <%= cl_image_tag @product.photos[1].key, height: 110, width: 110, crop: :fill %>
-            <% else %>
-              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
-            <% end %>
-            <% if @product.photos.attached?  %>
-              <%= cl_image_tag @product.photos[2].key, height: 110, width: 110, crop: :fill %>
-            <% else %>
-              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
-            <% end %>
-            <% if @product.photos.attached?  %>
-              <%= cl_image_tag @product.photos[3].key, height: 110, width: 110, crop: :fill %>
-            <% else %>
-              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
-            <% end %>
-            <% if @product.photos.attached?  %>
-              <%= cl_image_tag @product.photos[4].key, height: 110, width: 110, crop: :fill %>
-            <% else %>
-              <img height="300" width="400" src="https://res.cloudinary.com/dzyd1ynmn/image/upload/v1605792731/no_img_available_skqx9j.png">
-            <% end %>
-
 					</div>	
 			</div>
     </div>
 
     <div class="tasting_description col-4" id="tasting">
-      <h1> Box Description</h1>
+      <h1> <%= @product.name %></h1>
+        <%= link_to "Edit", edit_product_path(@product) %> |
+        <%= link_to "Delete", product_path(@product), method: :delete, data: {confirm: "Are you sure?"} %>
+      <h6> <strong> Dimensions: </strong>  </h6>
+      <p> H: <%= @product.height %> cm x L: <%= @product.lenght %> cm </p>
+        <%= simple_form_for [@product, @line_item], html: { class: :new_order_form } do |f| %>
+          <%= f.input :quantity, input_html: {value: f.object.quantity || 1} %>
+          <%= f.submit 'Add to Cart', class: 'btn btn-gold confirm-order' %>
+          <%# <%= link_to "View Basket", dashboard_path, class: 'btn btn-checkout' %>
+          <% end %>
+      <h6> <strong> Description: </strong>  </h6>
+      <p> <%= @product.description %> </p>
 
     </div>
  

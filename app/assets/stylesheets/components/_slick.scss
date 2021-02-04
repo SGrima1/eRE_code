@@ -29,3 +29,19 @@ img{
   width: 100px;
   object-fit: cover;
 }
+
+.slick-dots{
+  position: absolute;
+  top: -36px;
+  max-height: 36px;
+  display: block;
+  width: 100%;
+  padding: 10;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  }
+  .slick-dots li.slick-active button:before{
+    font-size:15px;
+    color:blue;
+  }

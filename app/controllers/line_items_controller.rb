@@ -1,4 +1,7 @@
 class LineItemsController < ApplicationController
+  def new
+  end
+  
   def create
     # Find associated product and current cart
     chosen_product = Product.find(params[:product_id])
@@ -11,10 +14,9 @@ class LineItemsController < ApplicationController
       # Iterate the line_item's quantity by one
       @line_item.quantity += 1
     else
-      @line_item = LineItem.new
+      @line_item = LineItem.new(line_item_params)
       @line_item.cart = current_cart
       @line_item.product = chosen_product
-      @line_item.quantity = 1
     end
   
     # Save and redirect to cart show path
@@ -46,7 +48,7 @@ class LineItemsController < ApplicationController
   
   private
     def line_item_params
-      params.require(:line_item).permit(:quantity,:product_id, :cart_id, :order_id)
+      params.require(:line_item).permit(:quantity)
     end
 end
 
