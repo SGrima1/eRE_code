@@ -2,11 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
 
 
 // Define fonts for body and headers
-$body-font:  "Roboto", "sans-serif";
-$headers-font:  'Playfair Display SC', serif;
+$body-font: 'Montserrat', sans-serif;
+$headers-font: 'Playfair Display SC', serif;
 
 
 // To use a font file (.woff) uncomment following lines
