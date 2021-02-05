@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: 3fr 1fr;
   min-height: 75vh;
+  padding-bottom: 25vh;
   grid-template-areas: 
   "Heading Order-summary-title"
   "Order-table Order-summary"
