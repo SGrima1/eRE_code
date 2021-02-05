@@ -13,7 +13,7 @@
       <h4> <%= line_item.product.name %> </h4>
       </div>
       <div class="unit_price">
-        <%= line_item.quantity %> X <%= number_to_currency(line_item.product.price)%>
+        <%= line_item.quantity %> X <%= humanized_money_with_symbol(line_item.product.price)%>
       </div>
       <div class="quantity_control">
         <div class="add_one">
@@ -26,7 +26,7 @@
     </div>  
 
     <div class="total_price">
-      Total Price: <%= number_to_currency(line_item.total_price) %>
+      Total Price: <%= humanized_money_with_symbol(line_item.total_price) %>
     <div class="remove_item">
       <%= link_to "x", line_item_path(line_item), method: :delete, class: "remove" %>
     </div>
@@ -37,7 +37,7 @@
       <h3>Order Summary</h3>
     </div>
     <div class="order_summary">
-      <h6>Sub total: <%= number_to_currency(@cart.sub_total) %></h6>
+      <h6>Sub total: <%= humanized_money_with_symbol(@cart.sub_total) %></h6>
       <%= link_to "Proceed to checkout", new_order_path,  class: "btn btn-primary" %>
       <%= link_to "Empty cart", cart_path(@current_cart),method: :delete, data: {confirm: "Are you sure?"} %>
     </div>

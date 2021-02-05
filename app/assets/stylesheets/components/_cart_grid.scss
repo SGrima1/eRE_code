@@ -2,18 +2,19 @@
   max-width: 1100px;
   margin: auto;
   display: grid;
-  justify-content: stretch;
   grid-template-columns: 3fr 1fr;
-
+  min-height: 75vh;
   grid-template-areas: 
   "Heading Order-summary-title"
+  "Order-table Order-summary"
   "Order-table Order-summary";
 }
 
 .cart_heading{
   padding: 1em;
-  border-bottom: 1px solid #D0D0D0;
+  border-bottom: 2px solid #D0D0D0;
   grid-area: Heading;
+  align-self: end;
   h2 {
     // font-family: $fontSerif;
     font-size: 2em;
@@ -23,15 +24,17 @@
 .order_summary_title{
   grid-area: Order-summary-title;
   align-self: center;
-  border-bottom: 1px solid #D0D0D0;
+  border-bottom: 2px solid #D0D0D0;
   padding: 1em ;
+  align-self: end;
 }
 
 .order_summary{
   padding: 1em ;
   grid-area: Order-summary;
   align-self: center;
-  border-left: 1px solid #D0D0D0;
+  border-left: 2px solid #D0D0D0;
+  align-self: stretch;
 }
 
 .cart_grid{
@@ -39,7 +42,7 @@
   display: grid;
   grid-template-columns: 0.75fr 3fr 1fr;
   align-items: center;
-  border-bottom: 1px solid #D0D0D0;
+  border-bottom: 2px solid #D0D0D0;
   height: 200px;
   padding-left: 16px;
 }
