@@ -5,10 +5,12 @@ class ProductsController < ApplicationController
 
   def new
     @product = Product.new
+ 
   end
 
   def show
     @product = Product.find(params[:id])
+    @line_item = LineItem.new
   end
 
   def create
@@ -34,6 +36,6 @@ class ProductsController < ApplicationController
 
   private
     def product_params
-      params.require(:product).permit(:name, :price, photos: [])
+      params.require(:product).permit(:name, :price, :description , :height, :lenght, :line_item, photos: [])
     end
 end

@@ -7,6 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("trix")
+require("@rails/actiontext")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -23,14 +25,21 @@ require("channels")
 // ----------------------------------------------------
 
 // External imports
+require("slick-carousel");
+import "slick-carousel/slick/slick.scss"
+import "slick-carousel/slick/slick-theme.scss"
 import "bootstrap";
+
 import { backgroundVideo } from '../components/bideo';
+import { slickCarousel } from '../components/slick_carousel';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   backgroundVideo();
+  slickCarousel();
+  $('.scroller').slick();
   // Call your functions here, e.g:
   // initSelect2();
 });

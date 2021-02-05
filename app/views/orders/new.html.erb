@@ -1,17 +1,17 @@
-<%= form_for(@order) do |f| %>
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name, required: true, autofocus: true %>
-  </p>
-  <p>
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </p>
-  <p>
-    <%= f.label :address %><br>
-    <%= f.text_area :address %>
-  </p>
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+<div class="row m-0">
+  <div class="left-col col-6 p-5">
+    <h3 class="text-info mt-3 pt-3">Please confirm your order details</h3>
+    <div class="form-top">
+      
+        <%= simple_form_for [@order] do |f| %>
+          <%= f.input :name,  label: false, placeholder: 'Your Name' %>
+          <%= f.input :company_name,  label: false, placeholder: 'Company Name' %>
+          <%= f.input :email,  label: false, placeholder: 'Email Addres' %>
+          <%= f.input :address,  label: false, placeholder: 'Delivery Address' %>
+          <%= f.input :phone_number,  label: false, placeholder: 'Phone Number' %>
+          <%= f.submit "Place your order", class: 'btn btn-primary' %>
+        <% end %>
+    </div>
+  </div>    
+  <div class="right-col col-6 vh-100" style="background-image: url('<%= image_path("boxes.png") %>')"></div>
+</div>
