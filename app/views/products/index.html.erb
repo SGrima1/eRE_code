@@ -19,7 +19,10 @@
   </div>
   </div>
 <div class="index-page-container">
-  <%= link_to "New product", new_product_path, class: "btn btn-primary" %>
+  <% if user_signed_in? && current_user.admin == true %>
+    <%= link_to "New product", new_product_path, class: "btn btn-primary" %>
+  <% end %>
+  
     <div class="index-grid">
       <h2> <a id="index-title"></a> The Lotus  </h2>
       <% @products.each do |product| %>
