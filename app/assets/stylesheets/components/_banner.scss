@@ -155,3 +155,18 @@
   color: white;
   text-decoration: underline;
 }
+
+@media screen and (max-width: 600px) {
+  .index-banner-grid {
+    margin-left: 2vh;
+    margin-right: 2vh;
+  }
+
+  .index-page-container{
+    width: 95%;
+  }
+
+  .navbar-toggler{
+    background: white;
+  }
+}

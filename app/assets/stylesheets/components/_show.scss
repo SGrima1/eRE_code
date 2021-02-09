@@ -3,9 +3,6 @@
   font-size: 16px;
  }
  
- .show-container{
-   width: 1360px;
- }
  
  .bottom-container {  
    display: flex;
@@ -19,8 +16,10 @@
  }
  
  .tasting-menu {
-   width: 1360px;
+   max-width: 1360px;
    padding-left: 40px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
  }
  
  .btn-ghost {
@@ -281,3 +280,12 @@
  .menu_width{
    width: 83.8%;
  }
+
+ @media screen and (max-width: 600px) {
+  .tasting-menu {
+    padding-left: 1vh;
+  }
+  .tasting_description{
+    text-align: start;
+  }
+}
