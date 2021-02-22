@@ -1,19 +1,45 @@
-<div class="show-container mx-auto py-5">
-
-
-  <div class="tasting-menu row mx-auto">
-    <div class="restaurant-cards" style="display: flex; justify-content: center">
-     <%= cl_image_tag @product.photos[3].key, height: 300, width: 400, crop: :fill %>
+<div class="show-container mx-auto">
+  <div class="tasting-menu row mx-auto" style="background-image:url(<%= cl_image_path @product.photos[3].key %>);background-size: cover;background-repeat: no-repeat;width: 100%;height: 600px;">
+    <div class="restaurant-cards"  >
+    
 		</div>
   </div>
 
-    <div class="tasting_description" id="tasting">
+    <div class="tasting_description p-5" id="tasting">
+    
       <h1> <%= @product.name %></h1>
+      <% if user_signed_in? && current_user.admin == true %>
         <%= link_to "Edit", edit_product_path(@product) %> |
         <%= link_to "Delete", product_path(@product), method: :delete, data: {confirm: "Are you sure?"} %>
-      <h6> <strong> Description: </strong>  </h6>
+      <% end %>
+      
       <p> <%= @product.description %> </p>
-
     </div>
- 
+  </div>
+  <div class="show_mid_banner">  
+    <div class="show_mid_text">
+      <h4>  <%= @product.small_text %>  </h4>
+    </div>
+  </div>
+  <div class="bottom_show_grid">
+    <div class="show_grid_photo">
+      <%= cl_image_tag @product.photos[0].key %>
+    </div>
+    <div class="show_grid_text">
+    <p> <%=  @product.text_area_one %> </p> 
+    </div>
+    <div class="show_grid_photo">
+      <%= cl_image_tag @product.photos[1].key %>
+    </div>
+    <div class="show_grid_text">
+      <p> <%=  @product.text_area_two %> </p> 
+    </div>
+    <div class="show_grid_photo">
+      <%= cl_image_tag @product.photos[2].key %>
+    </div>
+    <div class="show_grid_text">
+      <p> <%=  @product.text_area_three %> </p> 
+    </div>
+  
+  
   </div>

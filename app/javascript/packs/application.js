@@ -31,15 +31,12 @@ import "slick-carousel/slick/slick-theme.scss"
 import "bootstrap";
 
 import { backgroundVideo } from '../components/bideo';
-import { slickCarousel } from '../components/slick_carousel';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   backgroundVideo();
-  slickCarousel();
-  $('.scroller').slick();
   // Call your functions here, e.g:
   // initSelect2();
 });
