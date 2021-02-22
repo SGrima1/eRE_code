@@ -17,6 +17,10 @@
         <li class="nav-item">
          <h4>  <%= link_to "Basket", cart_path(@current_cart), class: "nav-link" %> </h4>
         </li>
+        <li class="nav-item">
+         <h4>  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></h4>
+        </li>
+        
 
       <% else %>
         <li class="nav-item">

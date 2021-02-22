@@ -91,14 +91,15 @@
 .index-banner-grid{
   z-index: 2;
   display: grid;
-  margin-left: 24vh;
-  margin-right: 24vh;
+  margin-left: 32vh;
+  margin-right: 32vh;
   height: 80vh;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-template-rows: 6fr 1fr 1fr;
+  grid-template-rows: 2fr 3fr 1fr 1fr;
   align-items: center;
   grid-template-areas: 
-  "title x x"
+  "title title title"
+  "text text text"
   "space space space "
   "footer footer footer ";
 }
@@ -110,6 +111,20 @@
   font-weight: 400;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
   grid-area: title;
+  padding-left: 4vh;
+  grid-area: title;
+  justify-self: center;
+}
+
+.index-banner-grid h3{
+  font-size: 33px;
+  font-style: normal;
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+  grid-area: text;
+  justify-self: center;
+  text-align: center;
   padding-left: 4vh;
 }
 

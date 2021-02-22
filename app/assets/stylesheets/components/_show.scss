@@ -17,7 +17,6 @@
  
  .tasting-menu {
    max-width: 1360px;
-   padding-left: 40px;
    display: grid;
    grid-template-columns: repeat(auto-fit, minmax(500px,1fr));
  }
@@ -53,14 +52,6 @@
  }
  
  .card-dish-pricing{
- 
- }
- 
- .btn-price {
-   background-color: $m-blue;
-   color: white;
-   border-radius: 50px;
-   padding: 7px 0px;
  
  }
  
@@ -219,10 +210,6 @@
  .new_order {
    color: $m-blue;
    text-align: center;
- }
- 
- .title_price h2 {
- font-size: 15px;
  }
  
  .dish_instructions h2 {

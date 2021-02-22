@@ -5,27 +5,18 @@
       <h5 class="text-secondary my-4">First things first: Let's start with the basics</h5>
       <h5 class="text-muted"></h5>
         <%= simple_form_for [@product] do |f| %>
-          <%= f.input :name,  label: false, placeholder: 'Box Name' %>
-          <%= f.rich_text_area :description,  label: false, placeholder: 'Box Description' %>
-          
+          <%= f.input :name,  label: false, placeholder: 'Service Target' %>
+          <%= f.rich_text_area :description,  label: false, placeholder: 'Service Description' %>
+          <%= f.rich_text_area :text_area_one,  label: false, placeholder: 'First Text' %>
+          <%= f.rich_text_area :text_area_two,  label: false, placeholder: 'Second Text' %>
+          <%= f.rich_text_area :text_area_three,  label: false, placeholder: 'Thrid Text' %>
+          <%= f.rich_text_area :small_text,  label: false, placeholder: 'Index Text' %>
           <div class="row m-3">
             <div class="col-6">
               <%= f.input :photos, as: :file, input_html: {multiple: true, class: "d-none", id: 'photo-input'}, label_html: {class: "upload-photo"} , label: ':camera: Upload photo(s)' %>
-            </div>
-            <div class="col-6">
-              <%= f.input :price, placeholder: 'Price' %>
+              <%= f.submit "Let's sell this product", class: 'btn btn-primary' %>
             </div>
           </div>
-          <h5 class="text-secondary">Now let's add the dimension details</h5>
-          <div class="row m-3">
-            <div class="p-0 col-6">
-              <%= f.input :height,  placeholder: 'Box height' %>
-            </div>
-            <div class="px-3 col-6">
-              <%= f.input :lenght,  placeholder: 'Box Length' %>
-            </div>
-          </div>
-            <%= f.submit "Let's sell this box", class: 'btn btn-primary' %>
         <% end %>
     </div>
   </div>    
