@@ -30,6 +30,7 @@ gem "jquery-slick-rails"
 
 gem 'money-rails'
 gem 'stripe'
+gem 'friendly_id', '~> 5.4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

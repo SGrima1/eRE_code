@@ -31,12 +31,13 @@ import "slick-carousel/slick/slick-theme.scss"
 import "bootstrap";
 
 import { backgroundVideo } from '../components/bideo';
-
+import { navTitle } from '../components/typewriter';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
   backgroundVideo();
+  navTitle();
   // Call your functions here, e.g:
   // initSelect2();
 });

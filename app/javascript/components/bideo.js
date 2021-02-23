@@ -4,8 +4,6 @@ const backgroundVideo = () => {
   const background = document.querySelector('#banner_video');
   if (background){
     const bv = new Bideo();
-    console.log(bv);
-    console.log('hello');
     bv.init({
       // Video element
       videoEl: document.querySelector('#banner_video'),

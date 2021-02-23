@@ -4,7 +4,7 @@
   <video id="banner_video" loop muted></video>
   <div id="main_content">
   <div class="index-banner-grid">
-    <h1>eRE</h1>
+     <h1> <div id="app-title">  </div></h1>
     <h3>Established to help kitchen owners and restaurateurs navigate the food delivery market.</h3>
     <div class="space"></div>
     <div class="index-shop">
@@ -27,10 +27,12 @@
     <div class="index-grid">
       <h4> <a id="index-title"></a> Who you are?</h4>
       <% @products.each do |product| %>
-        <div class="m-3 p-3">
+        <div class="mx-2 px-2">
           <%= link_to product_path(product.id) do %> 
            <div class="product-card" > 
-            
+            <div class="index-card-title">
+              <%= link_to product.name, product_path(product.friendly_id) %>
+            </div>
              <div class="product-card-image" style="background-image: url(
                 <% if product.photos.attached?  %>
                   <%= cl_image_path product.photos[3].key, height: 300, width: 400, crop: :fill %>
@@ -40,26 +42,33 @@
               );"> 
               </div>
             <div class="product-card-info">  
-              
-              <div class="index-card-grid">
-                <div class="index-card-title">
-                  <%= link_to product.name, product_path(product.id) %>
-                </div>
-]
-                <div class="index-card-discover">
-                  <h4>Discover Now <%= fa_icon "chevron-circle-right" , class: "discover_font_awesome" %> </h4>
-              </div>
-            </div>
-
-
-           </div> 
+             <p> <%= product.small_text %> </p> 
+             
+           </div>
+          <div class="see-more">
+            <%= link_to "See More", product_path(product.friendly_id), class: "btn btn-primary" %>
+          </div>
           </div>
           
           <%# <%= button_to "Add #{product.name} to cart", new_product_line_item_path(:product_id => product.id, :quantity => 1) %> 
         <% end %>  
         </div>
-       <% end %>
+        <% end %>
     </div>
 
+      <div class="about-us">
+        <h4> <a id="index-title"></a> Who we are?</h4>
+        <div class="about-grid">
+        
+        <div class="about-card">
+          <div class="about-picture">
+          <%= cl_image_tag "https://res.cloudinary.com/dzyd1ynmn/image/upload/v1614109704/Sebastian_Grima-86_-_EDIT_j4z0gb.jpg", height: 300, width: 400, gravity: :face, crop: :thumb  %>
+          </div>
+        </div>
+        
+        </div>
+
 </div>
+
+
 
