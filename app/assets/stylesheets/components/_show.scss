@@ -1,12 +1,25 @@
- .bottom-container {  
-   display: flex;
-   position: relative;
-   margin-top: 30px;
- }
  
  .show-container{
    display: grid;
    grid-template-columns: 1fr 1fr;
+   position: relative;
+   margin-bottom: 32px;
+
+   &:after {
+    background: lightgray;
+    content: '';
+    display: block;
+    height: 90%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    background: lightgray;
+    bottom: 0px;
+    transform: skewY(-2deg);
+    transform-origin: 100%;
+  }
+
  }
  
  .tasting-menu {
@@ -78,23 +91,95 @@
   text-align: center;
  }
 
- .bottom_show_grid{
+ .bottom_container{
    background-color: lightgray;
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   padding-bottom: 75px;
-   grid-template-areas: 
-   "photo text"
-   "text photo"
-   "photo text";
+   position: relative;
+   z-index: 1;
+   margin-top: 32px;
+   left: 0;
+   right: 0;
+ 
+   &:before,
+   &:after {
+     background: lightgray;
+     content: '';
+     display: block;
+     height: 90%;
+     left: 0;
+     position: absolute;
+     right: 0;
+     z-index: -1;
+ 
+   }
+ 
+   &:before {
+     background: lightgray;
+     top: 0;
+     transform: skewY(-2deg);
+     transform-origin: 0% 0;
+     bottom: 0;
+   }
+   
+   &:after {
+     background: lightgray;
+     bottom: -32px;
+     transform: skewY(-2deg);
+     transform-origin: 100%;
+   }
  }
 
- .show_grid_photo{
-  grid-area: photo;
+ .bottom_show_grid{
+   display: grid;
+   justify-content: center;
+   align-items: center;
+   max-width: 1338px;
+   margin: auto;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   padding:32px 64px;
+   grid-gap: 64px;
+   padding-bottom: 75px;
+   grid-template-areas: 
+   "photo_one text_one"
+   "text_two photo_two"
+   "photo_three text_three";
+ }
+
+ .show_grid_photo_one{
+  grid-area: photo_one;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
 }
 
-.show_grid_text{
-  grid-area: text;
+.show_grid_text_one{
+  grid-area: text_one;
+}
+
+.show_grid_photo_two{
+  grid-area: photo_two;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+.show_grid_text_two{
+  grid-area: text_two;
+  
+}
+
+.show_grid_photo_three{
+  grid-area: photo_three;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 300px;
+}
+
+.show_grid_text_three{
+  grid-area: text_three;
 }
 
 

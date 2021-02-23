@@ -21,25 +21,23 @@
       <h4>  <%= @product.small_text %>  </h4>
     </div>
   </div>
-  <div class="bottom_show_grid">
-    <div class="show_grid_photo">
-      <%= cl_image_tag @product.photos[0].key %>
+
+  <div class="bottom_container">
+    <div class="bottom_show_grid">
+      <div class="show_grid_photo_one style=" style="background-image:url(<%= cl_image_path @product.photos[0].key %>);">
+      </div>
+      <div class="show_grid_text_one">
+      <p> <%=  @product.text_area_one %> </p> 
+      </div>
+      <div class="show_grid_photo_two" style="background-image:url(<%= cl_image_path @product.photos[1].key %>);">
+      </div>
+      <div class="show_grid_text_two">
+        <p> <%=  @product.text_area_two %> </p> 
+      </div>
+      <div class="show_grid_photo_three" style="background-image:url(<%= cl_image_path @product.photos[2].key %>);">
+      </div>
+      <div class="show_grid_text_three">
+        <p> <%=  @product.text_area_three %> </p> 
+      </div>
     </div>
-    <div class="show_grid_text">
-    <p> <%=  @product.text_area_one %> </p> 
-    </div>
-    <div class="show_grid_photo">
-      <%= cl_image_tag @product.photos[1].key %>
-    </div>
-    <div class="show_grid_text">
-      <p> <%=  @product.text_area_two %> </p> 
-    </div>
-    <div class="show_grid_photo">
-      <%= cl_image_tag @product.photos[2].key %>
-    </div>
-    <div class="show_grid_text">
-      <p> <%=  @product.text_area_three %> </p> 
-    </div>
-  
-  
   </div>

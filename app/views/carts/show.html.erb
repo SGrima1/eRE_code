@@ -22,11 +22,8 @@
       </div>
     </div>  
 
-    <div class="total_price">
-      Total Price: <%= humanized_money_with_symbol(line_item.total_price) %>
     <div class="remove_item">
       <%= link_to "x", line_item_path(line_item), method: :delete, class: "remove" %>
-    </div>
     </div>
     <% end %>
   </div>
