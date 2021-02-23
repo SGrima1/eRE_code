@@ -62,8 +62,7 @@
         
         <div class="about-card">
           <div class="about-picture">
-          <%= cl_image_tag "https://res.cloudinary.com/dzyd1ynmn/image/upload/v1614109704/Sebastian_Grima-86_-_EDIT_j4z0gb.jpg", height: 300, width: 400, gravity: :face, crop: :thumb  %>
-          </div>
+          <%= cl_image_tag("Sebastian_Grima-86_-_EDIT_j4z0gb.jpg", :effect=>"grayscale", :gravity=>"face", :height=>300, :radius=>0, :width=>255, :crop=>"fill") %>      </div>
         </div>
         
         </div>
