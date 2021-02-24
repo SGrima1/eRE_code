@@ -18,3 +18,39 @@
 .navbar-brand h1{
   color: white;
 }
+
+.nav-link a{
+  color: white !important;
+  text-decoration: none;
+}
+
+.new-font{
+  font-family: 'Old Standard TT', serif;
+  font-size: 72px;
+}
+
+.nav-grid{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-template-areas: "two three one four five";
+  width: 100%;
+  justify-items: center;
+  align-items: center;
+}
+
+#nav-one{
+  grid-area: one;
+}
+
+#nav-two{
+  grid-area: two;
+}
+#nav-three{
+  grid-area: three;
+}
+#nav-four{
+  grid-area: four;
+}
+#nav-five{
+  grid-area: five;
+}
