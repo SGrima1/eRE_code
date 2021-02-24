@@ -77,17 +77,31 @@
 .about-grid{
   display: grid;
   grid-template-columns: 1fr;
+  margin-top: 44px;
+  padding-left: 16px;
 }
 
 .about-card{
   display:grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 4fr;
 }
 
 .about-picture{
-  height: 400px;
-  width: 400px;
- 
+  height: 300px;
+  width: 255px;
+  border-radius: 50%;
+}
+
+.about-info{
+  justify-self: start;
+  text-justify: inter-word;
+  text-align: justify;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+
+  h5{
+    font-size: 24px;
+  }
 }
 
 @media(max-width: 768px) {
