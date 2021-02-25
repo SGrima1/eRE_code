@@ -23,8 +23,8 @@
         
 
         <% if user_signed_in? %>
-          <li class="nav-item">
-          <h4>  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></h4>
+          <li class="nav-item-log">
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>
         <% end %>
 

@@ -33,9 +33,14 @@
   display: grid;
   grid-template-columns: repeat(5,1fr);
   grid-template-areas: "two three one four five";
-  width: 100%;
+  width: 80%;
+  margin: auto;
   justify-items: center;
   align-items: center;
+}
+
+.nav-item-log{
+  font-size: 8px;
 }
 
 #nav-one{

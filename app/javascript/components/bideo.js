@@ -20,7 +20,7 @@ const backgroundVideo = () => {
       // of different video formats to add
       src: [
         {
-          src: 'https://res.cloudinary.com/dzyd1ynmn/video/upload/v1612295454/flower_bloom_auwpyf.mp4',
+          src: 'https://res.cloudinary.com/dzyd1ynmn/video/upload/v1614249092/kter_banner_p8tcaj.mp4',
           type: 'video/mp4'
         },
         // {

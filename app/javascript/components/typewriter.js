@@ -9,11 +9,15 @@ const navTitle = () => {
 
   console.log(app)
 
-  typewriter.typeString('eREM')
+  typewriter.typeString('Kitchen Spaces')
     .pauseFor(2500)
-    .deleteChars(3)
-    .typeString('RealEstateManagement')
+    .deleteAll()
+    .typeString('Logistics')
     .pauseFor(2500)
+    .deleteAll()
+    .typeString('Franchise Operations')
+    .pauseFor(2500)
+    .deleteAll()
     .start();
   }
 
