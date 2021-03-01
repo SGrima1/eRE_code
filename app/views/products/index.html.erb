@@ -31,7 +31,7 @@
           <%= link_to product_path(product.id) do %> 
            <div class="product-card" > 
             <div class="index-card-title">
-             A <%= link_to product.name, product_path(product.friendly_id) %>
+             <%= link_to product.name, product_path(product.friendly_id) %>
             </div>
              <div class="product-card-image" style="background-image: url(
                 <% if product.photos.attached?  %>
