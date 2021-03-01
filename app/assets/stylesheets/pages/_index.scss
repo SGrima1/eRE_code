@@ -138,4 +138,17 @@
     grid-column: 2;
   }
 
+  .about-card{
+    display:grid;
+    grid-template-columns: 1fr;
+  }
+
+  .about-picture{
+    justify-self: center;
+  }
+
+  .app-title{
+    display: none;
+  }
+
 }

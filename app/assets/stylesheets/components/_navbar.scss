@@ -59,3 +59,32 @@
 #nav-five{
   grid-area: five;
 }
+
+@media screen and (max-width: 600px) {
+  .nav-grid{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-areas: "one";
+  }
+
+  #nav-two{
+    display: none;
+    height: 0;
+    padding: 0 !important;
+  }
+
+  #nav-three{
+    display: none;
+    height: 0;
+    padding: 0 !important;
+  }
+  #nav-four{
+    display: none;
+    height: 0;
+    padding: 0 !important;
+  }
+  #nav-five{
+    display: none;
+    height: 0;
+    padding: 0 !important;
+  }
+}
