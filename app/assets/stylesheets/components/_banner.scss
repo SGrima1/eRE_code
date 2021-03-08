@@ -3,7 +3,7 @@
   height: 90vh;
   // background-size: cover;
   // background-position: center;
-  // background: asset_url('assets/dinner.jpg') no-repeat;
+  background: asset_url('assets/banner.jpg') no-repeat;
   // -ms-background-position-x: center;
   // -ms-background-position-y: bottom;
   // background-position: center bottom;
@@ -183,5 +183,25 @@
 
   .navbar-toggler{
     background: white;
+  }
+  .banner {
+    height: 84vh;
+  }
+
+  #banner_video{
+    height: 84vh;
+  }
+  
+  .index-banner-grid{
+    height: 60vh;
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-areas: 
+    "text text text"
+    "space space space "
+    "footer footer footer ";
+  }
+
+  .index-banner-grid h2{
+    display: none;
   }
 }
