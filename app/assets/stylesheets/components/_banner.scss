@@ -12,7 +12,7 @@
 }
 
 #banner-sub{
-  background: asset_url('assets/banner.jpg') no-repeat;
+  background: asset_url('assets/dinner.jpg') no-repeat;
   height: 90vh;
   z-index: 0;
   position: absolute;
@@ -98,7 +98,7 @@
 }
 
 .index-banner-grid{
-  z-index: 2;
+  z-index: 3;
   display: grid;
   margin-left: 32vh;
   margin-right: 32vh;
@@ -198,7 +198,8 @@
   }
 
   #banner_video{
-    height: 84vh;
+    display: none;
+
   }
   
   .index-banner-grid{
@@ -215,7 +216,9 @@
   }
 
   #banner-sub{
-    height: 84vh;
-    z-index: 2;
+    z-index: 1;
+    height: 84vh; width: 100%;
+    object-fit: cover;
+    position: absolute;
   }
 }
