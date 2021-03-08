@@ -4,6 +4,8 @@
   // background-size: cover;
   // background-position: center;
   background: asset_url('assets/banner.jpg') no-repeat;
+  -webkit-transform:translate(0%,0%);
+  width: 100%;
   // -ms-background-position-x: center;
   // -ms-background-position-y: bottom;
   // background-position: center bottom;

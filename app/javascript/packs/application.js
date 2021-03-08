@@ -36,7 +36,7 @@ import { navTitle } from '../components/typewriter';
 // import { initSelect2 } from '../components/init_select2';
 
 document.addEventListener('turbolinks:load', () => {
-  backgroundVideo();
+  // backgroundVideo();
   navTitle();
   // Call your functions here, e.g:
   // initSelect2();
