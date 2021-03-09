@@ -13,8 +13,14 @@
 
 #banner-sub{
   height: 90vh;
+  width: 100%;
   z-index: 0;
   position: absolute;
+}
+
+#banner-sub img{
+  height: 100%;
+  width: 100%;
 }
 
 #banner_video{
